@@ -12,6 +12,7 @@
 		--> NSDI, 2011, Dominant Resource Fairness: Fair Allocation of Multiple Resource Types
 		--> NSDI, 2011, Mesos: A Platform for Fine-Grained Resource Sharing in the Data Center
 		--> Sigcomm, 2011, Managing Data Transfers in Computer Clusters with Orchestra
+		--> Sigmetrics, 2015, Exchange of Services in Networks: Competition, Cooperation, and Fairness
 	--> TailLatency
 		--> SOCC, 2014, Tales of the Tail: Hardware, OS, and Application-level Sources of Tail Latency
 		--> Octopus-Man: QoS-Driven Task Management for Heterogeneous Multicores in Warehouses-Scale Computers
