@@ -25,3 +25,5 @@
 		--> Sigmetrics, 2015, Online Auctions in IaaS Clouds: Welfare and Profit Maximization with Server Costs
 --> WebServer
 	--> ATC, 1999, Flash: An Efficient and Portable Web Server
+--> Distributed Shared Memory
+	--> TOCS, 1989, Memory Coherence in Shared Virtual Memory Systems
