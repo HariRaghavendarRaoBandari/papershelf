@@ -1,0 +1,27 @@
+--> DBMS
+	--> ComputerSurvey, 1980, The Recovery Manager of the System R Database manager
+--> Distributed System
+	--> Fairness
+		--> Sigmetrics, 2015, Multi-Resource Fairness: Objectives, Algorithms and Performance
+	--> LoadBalancing
+		--> Sigmetrics, 2015, Distributed Proportional Fair Load Balancing in Heterogeneous Systems
+	--> Ordering
+		--> Communications of the ACM, 1978, Time, Clocks, and the Ordering of Events in a Distributed Systema
+		--> Classical paper, 2001, Paxos Made Simple
+	--> ResourceManagement
+		--> NSDI, 2011, Dominant Resource Fairness: Fair Allocation of Multiple Resource Types
+		--> NSDI, 2011, Mesos: A Platform for Fine-Grained Resource Sharing in the Data Center
+		--> Sigcomm, 2011, Managing Data Transfers in Computer Clusters with Orchestra
+	--> TailLatency
+		--> SOCC, 2014, Tales of the Tail: Hardware, OS, and Application-level Sources of Tail Latency
+		--> Octopus-Man: QoS-Driven Task Management for Heterogeneous Multicores in Warehouses-Scale Computers
+--> OperatingSystem
+	--> Communications of the ACM, 1980, Experience with Processes and Monitors in Mesa
+	--> Communications of the ACM, 1978, The UNIX Time-Sharing System
+--> Power&Energy
+	--> SOSP, 2015, Software Defined Batteries
+--> Virtualization
+	--> VMResourceModel
+		--> Sigmetrics, 2015, Online Auctions in IaaS Clouds: Welfare and Profit Maximization with Server Costs
+--> WebServer
+	--> ATC, 1999, Flash: An Efficient and Portable Web Server
