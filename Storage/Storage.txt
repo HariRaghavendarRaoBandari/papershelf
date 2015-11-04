@@ -1,0 +1,2 @@
+--> SOSP, 2009, FAWN: A Fast Array of Wimpy Nodes
+--> ISCA, 2013, QuickSAN: A Storage Area Network for Fast, Distributed, Solid State Disks
