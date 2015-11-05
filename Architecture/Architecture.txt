@@ -11,3 +11,4 @@
 	--> HPCA, 2015, Event-Based Scheduling for Energy-Efficient QoS (eQoS) in Mobile Web Applications
 --> CacheDesign
 	--> Sigmetrics, 2015, Transient and Steady-state Regime of a Family of List-based Cache Replacement Algorithms
+	--> Sigmetrics, 2015, Memory Row Reuse Distance and its Role in Optimizing Application Performance
