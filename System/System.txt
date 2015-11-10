@@ -15,7 +15,9 @@
 		--> Sigmetrics, 2015, Exchange of Services in Networks: Competition, Cooperation, and Fairness
 	--> TailLatency
 		--> SOCC, 2014, Tales of the Tail: Hardware, OS, and Application-level Sources of Tail Latency
-		--> Octopus-Man: QoS-Driven Task Management for Heterogeneous Multicores in Warehouses-Scale Computers
+		--> HPCA, 2015, Octopus-Man: QoS-Driven Task Management for Heterogeneous Multicores in Warehouses-Scale Computers
+	--> Consolidation
+		--> SOCC, 2015, Energy Proportionality and Workload Consolidation for Latency-critical Applications
 --> OperatingSystem
 	--> Communications of the ACM, 1980, Experience with Processes and Monitors in Mesa
 	--> Communications of the ACM, 1978, The UNIX Time-Sharing System
