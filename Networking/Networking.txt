@@ -4,6 +4,7 @@
 	--> Sigcomm, 2014, Millions of Little Minions: Using Packets for Low Latency Network Programming and Visibility
 	--> ISCA workshop, 2015, A 10G NetwFPGA Prototype for In-Network Aggregation
 	--> Sigcomm, 2013, Supporting Applications-specific In-network Processing in Data Centers
+	--> WhitePaper, 2014, Cisco Global Cloud Index: Forecast and Methodology, 2014-2019
 --> NetworkAccelerator
 	--> HotOS, 2015, FlexNIC: Rethinking Network DMA
 --> NetworkResearchMechanism

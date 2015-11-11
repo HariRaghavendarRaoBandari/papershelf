@@ -6,6 +6,7 @@
 	--> ISCA, 2015, Profiling a warehouse-scale computer
 	--> Communications of the ACM, 2008, The Data Center is The Computer
 	--> Book, 2009, The Datacenter as a Computer: An Introduction to the Design of Warehouse-Scale Machines, 
+	--> IEEEMicro, 2012, (Re)Designing Data-Centric Data Centers
 --> Heterogeneous
 	--> ISCA, 2012, The Yin and Yang of Power and Performance for Asymmetric Hardware and Managed Software
 	--> HPCA, 2015, Event-Based Scheduling for Energy-Efficient QoS (eQoS) in Mobile Web Applications
