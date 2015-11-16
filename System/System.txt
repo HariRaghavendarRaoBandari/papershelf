@@ -1,6 +1,8 @@
 --> DBMS
 	--> ComputerSurvey, 1980, The Recovery Manager of the System R Database manager
 --> Distributed System
+	--> MapReduce
+		--> OSDI, 2004, MapReduce: Simplified Data Processing on Large Clusters
 	--> Fairness
 		--> Sigmetrics, 2015, Multi-Resource Fairness: Objectives, Algorithms and Performance
 	--> LoadBalancing
