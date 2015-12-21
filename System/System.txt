@@ -18,6 +18,7 @@
 	--> TailLatency
 		--> SOCC, 2014, Tales of the Tail: Hardware, OS, and Application-level Sources of Tail Latency
 		--> HPCA, 2015, Octopus-Man: QoS-Driven Task Management for Heterogeneous Multicores in Warehouses-Scale Computers
+		--> CACM, 2013, The Tail at Scale
 	--> Consolidation
 		--> SOCC, 2015, Energy Proportionality and Workload Consolidation for Latency-critical Applications
 --> OperatingSystem
