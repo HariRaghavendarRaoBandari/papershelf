@@ -1,2 +1,15 @@
-# A small tool for paper organization
+# Description: A simple tool for paper organization
+
+# Motivation: Categorizing academic papers is a difficult but useful job, 
+# especially in some areas (i.e. computer science) which have tons of (good)
+# papers. A good category helps you (1) track latest problems and techniques;
+# and (2) understand related studies of your own research. Existing tools mainly
+# focus on (1) tagging the paper with random words, (2) saving into a local or 
+# cloud storage, and (3) simply retrieving. There is no summarization, thinking,
+# and categorization. The papershelf tool is developed to solve this problem.
+# Its key idea is "thinking while recording".
+# How does it work? Please try :D
+
 # Developer: Ming Liu
+
+# Status: on-going
