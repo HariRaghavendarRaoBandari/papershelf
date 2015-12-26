@@ -1,15 +1,46 @@
 # Description: A simple tool for paper organization
-
-# Motivation: Categorizing academic papers is a difficult but useful job, 
-# especially in some areas (i.e. computer science) which have tons of (good)
-# papers. A good category helps you (1) track latest problems and techniques;
-# and (2) understand related studies of your own research. Existing tools mainly
-# focus on (1) tagging the paper with random words, (2) saving into a local or 
-# cloud storage, and (3) simply retrieving. There is no summarization, thinking,
-# and categorization. The papershelf tool is developed to solve this problem.
-# Its key idea is "thinking while recording".
-# How does it work? Please try :D
-
 # Developer: Ming Liu
 
-# Status: on-going
+# Motivation: 
+# Categorizing academic papers is a difficult but useful job, especially in some
+# areas (i.e. computer science) which have tons of (good) papers. A good category
+# helps you (1) track latest problems and techniques; and (2) understand related
+# studies of your own research. Existing tools mainly focus on (1) tagging the 
+# paper with random words/notes, (2) saving into a local or cloud storage, and
+# (3) simply retrieving. There is no summarization, thinking, and categorization.
+# The papershelf tool is developed to solve this problem. Its key idea is "thinking
+# while recording".
+# How does it work? Keep reading or try :D
+
+# Papershelf: Design And Implementation
+# This tool organizes papers as follows:
+#
+#                area --> field --> subfield --> problem --> paper
+#
+# Here are two examples:
+# papershelf --> computer science
+#                --> Architecture
+#                    --> Datacenter
+#                        --> Benchmarking
+#                            --> 2012, ASPLOS, Clearing the Clouds: A Study of Emerging
+#                                              Scale-out Workloads on Modern Hardware
+#            --> computer science
+#                --> System
+#                    --> Energy&Power
+#                        --> PowerManagement
+#                            --> 2015, SOSP, Software Defined Batteries
+#
+# The above case presents two transactions:
+# 
+#     area --> computer science
+#     field --> Architecture
+#     subfield --> Datacenter
+#     problem --> Benchmarking
+#     paper --> 2012, ASPLOS, Clearing the Clouds: A Study of Emerging Scale-out 
+#               Workloads on Modern Hardware
+#
+#     area --> computer science
+#     field --> System
+#     subfield --> Energy&Power
+#     problem --> PowerManagement
+#     paper --> 2015, SOSP, Software Defined Batteries
