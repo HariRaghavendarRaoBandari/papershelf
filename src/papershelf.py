@@ -10,10 +10,10 @@ parser.add_argument("command", choices = ['configure', 'add', 'remove', 'show'],
 		           'Options supported by configure: -shelf -storage\n'
 			   'Options supported by add:-a -f -s -p -n -t -y -c -d\n'
 			   'Options supported by remove: -a -f -s -p -n\n'
-			   'Options supported by show: -a -f -s -p\n')
-parser.add_argument('-shelf', '--papershelf dir',
+			   'Options supported by show: -a -f -s -p -n\n')
+parser.add_argument('--database',
 		    help = 'Directory saving the papershelf database')
-parser.add_argument('-storage', '--papershelf storage dir',
+parser.add_argument('--storage',
 		    help = 'Directory saving all recorded papers')
 parser.add_argument('-a', '--area', default = 'computer science',
 		    help = 'Research area in the specified papershelf')
@@ -29,40 +29,45 @@ parser.add_argument('-t', '--title',
 		    help = 'Paper title')
 parser.add_argument('-y', '--year', type = int,
 		    help = 'Paper published year')
-parser.add_argument('-c', '--conference/journal/others',
+parser.add_argument('-c', '--conference',
 		    help = 'Paper published conference/journal/others')
 parser.add_argument('-d', '--description',
 		    help = 'Write some important notes')
 args = parser.parse_args()
 
-class papershelf(item):
-	def __init__(self):
-		self.database_dir = ''
-		self.storage_dir = ''
-		self.areas = ['computer science']
+class PaperShelf(item):
+    def __init__(self):
+        self.database_dir = ''
+        self.storage_dir = ''
+        self.areas = ['computer science']
 
-	def configure(self):
-		print "configure papershelf"
+    def configure(self, database_dir, storage_dir):
+        """Configure papershelf database and storage_dir
 
-	def add(self):
-		print "add papershelf"
+        """
+        print "configure papershelf"
 
-	def remove(self):
-		print "remove papershelf"
+    def add(self, area, field, subfield, problem, name, title, year, conference,
+            description):
+        print "add papershelf"
 
-	def show(self):
-		print "show papershelf"
+    def remove(self, area, field, subfield, problem, name):
+        print "remove papershelf"
+
+    def show(self, area, field, subfield, problem, name):
+        print "show papershelf"
 
 if __name__ == "__main__":
-	allshelf = papershelf()
+    allshelf = PaperShelf()
 
-	if args.command == 'configure':
-		allshelf.configure()
-	elif args.command == 'add':
-		allshelf.add()
-	elif args.command == 'remove':
-		allshelf.remove()
-	else:
-		allshelf.show()
+    if args.command == 'configure':
+        allshelf.configure(args.database, args.storage)
+    elif args.command == 'add':
+        allshelf.add(args.area, args.field, args.subfield, args.problem, 
+                     args.name, args.title, args.year, args.conference, args.description)
+    elif args.command == 'remove':
+        allshelf.remove(args.area, args.field, args.subfield, args.problem, args.name)
+    else:
+        allshelf.show(args.area, args.field, args.subfield, args.problem, args.name)
 
-	print 'Thanks for using papershelf v0.1 :D'
+    print 'Thanks for using papershelf v0.1 :D'
