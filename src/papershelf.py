@@ -37,7 +37,9 @@ args = parser.parse_args()
 
 class papershelf(item):
 	def __init__(self):
-		pass
+		self.database_dir = ''
+		self.storage_dir = ''
+		self.areas = ['computer science']
 
 	def configure(self):
 		print "configure papershelf"
