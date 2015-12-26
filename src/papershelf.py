@@ -36,7 +36,31 @@ parser.add_argument('-d', '--description',
 args = parser.parse_args()
 
 class papershelf(item):
-	pass
+	def __init__(self):
+		pass
+
+	def configure(self):
+		print "configure papershelf"
+
+	def add(self):
+		print "add papershelf"
+
+	def remove(self):
+		print "remove papershelf"
+
+	def show(self):
+		print "show papershelf"
 
 if __name__ == "__main__":
-	print args
+	allshelf = papershelf()
+
+	if args.command == 'configure':
+		allshelf.configure()
+	elif args.command == 'add':
+		allshelf.add()
+	elif args.command == 'remove':
+		allshelf.remove()
+	else:
+		allshelf.show()
+
+	print 'Thanks for using papershelf v0.1 :D'
