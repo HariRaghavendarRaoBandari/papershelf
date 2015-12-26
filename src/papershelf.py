@@ -7,12 +7,14 @@ parser = argparse.ArgumentParser(description = 'A simple paper organization tool
 				 formatter_class = argparse.RawTextHelpFormatter)
 parser.add_argument("command", choices = ['configure', 'add', 'remove', 'show'],
 		    help = 'Four commands supported by papershelf\n'
-		           'Options supported by configure: -storage\n'
+		           'Options supported by configure: -shelf -storage\n'
 			   'Options supported by add:-a -f -s -p -n -t -y -c -d\n'
 			   'Options supported by remove: -a -f -s -p -n\n'
 			   'Options supported by show: -a -f -s -p\n')
-parser.add_argument('-storage', '--papershelf storage',
-		    help = 'Move recorded papers into this storage')
+parser.add_argument('-shelf', '--papershelf dir',
+		    help = 'Directory saving the papershelf database')
+parser.add_argument('-storage', '--papershelf storage dir',
+		    help = 'Directory saving all recorded papers')
 parser.add_argument('-a', '--area', default = 'computer science',
 		    help = 'Research area in the specified papershelf')
 parser.add_argument('-f', '--field',
