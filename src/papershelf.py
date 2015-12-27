@@ -34,6 +34,8 @@ parser.add_argument('-c', '--conference',
 		    help = 'Paper published conference/journal/others')
 parser.add_argument('-d', '--description',
 		    help = 'Write some important notes')
+parser.add_argument('-v', '--verbosity', action = 'count', default = 0,
+                    help = 'increase output verbosity')
 args = parser.parse_args()
 
 class PaperShelf(item):
@@ -42,7 +44,7 @@ class PaperShelf(item):
         self.storage_dir = ''
         self.areas = ['computer science']
 
-    def configure(self, database_dir, storage_dir):
+    def configure(self, database_dir, storage_dir, verbosity):
         """Configure papershelf database_dir and storage_dir
 
         """
@@ -61,41 +63,46 @@ class PaperShelf(item):
             self.database_dir = database_dir
             tmp_database = 'DATABASE_DIR = ' + database_dir + '\n'
         else:
-            print 'database dir <{}> does not exist'.format(str(database_dir or ''))
+            if verbosity >= 1:
+                print 'database dir <{}> does not exist'.format(
+                str(database_dir or ''))
 
         if os.path.exists(str(storage_dir or '')) == True:
             self.storage_dir = storage_dir
             tmp_storage = 'STORAGE_DIR = ' + storage_dir + '\n'
         else:
-            print 'storage dir <{}> does not exist'.format(str(storage_dir or ''))
+            if verbosity >= 1:
+                print 'storage dir <{}> does not exist'.format(
+                str(storage_dir or ''))
 
         with open('.config', 'w') as f:
             f.write(tmp_database)
             f.write(tmp_storage)
 
     def add(self, area, field, subfield, problem, 
-            name, title, year, conference, description):
+            name, title, year, conference, description, verbosity):
         print "add papershelf"
 
-    def remove(self, area, field, subfield, problem, name):
+    def remove(self, area, field, subfield, problem, name, verbosity):
         print "remove papershelf"
 
-    def show(self, area, field, subfield, problem, name):
+    def show(self, area, field, subfield, problem, name, verbosity):
         print "show papershelf"
 
 if __name__ == "__main__":
     allshelf = PaperShelf()
 
     if args.command == 'configure':
-        allshelf.configure(args.database, args.storage)
+        allshelf.configure(args.database, args.storage, args.verbosity)
     elif args.command == 'add':
-        allshelf.add(args.area, args.field, args.subfield, args.problem, 
-                     args.name, args.title, args.year, args.conference, args.description)
+        allshelf.add(args.area, args.field, args.subfield, args.problem,
+                     args.name, args.title, args.year, args.conference, 
+                     args.description, args.verbosity)
     elif args.command == 'remove':
-        allshelf.remove(args.area, args.field, args.subfield, 
-                        args.problem, args.name)
+        allshelf.remove(args.area, args.field, args.subfield, args.problem,
+                        args.name, args.verbosity)
     else:
-        allshelf.show(args.area, args.field, args.subfield, 
-                      args.problem, args.name)
+        allshelf.show(args.area, args.field, args.subfield, args.problem,
+                      args.name, args.verbosity)
 
     print 'Thanks for using papershelf v0.1 :D'
