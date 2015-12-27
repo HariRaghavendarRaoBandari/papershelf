@@ -57,17 +57,17 @@ class PaperShelf(item):
                     if 'STORAGE_DIR' in line.split():
                         tmp_storage = line
 
-        if os.path.exists(database_dir) == True:
+        if os.path.exists(str(database_dir or '')) == True:
             self.database_dir = database_dir
             tmp_database = 'DATABASE_DIR = ' + database_dir + '\n'
         else:
-            print 'database dir {} does not exist'.format('a')
+            print 'database dir <{}> does not exist'.format(str(database_dir or ''))
 
-        if os.path.exists(storage_dir) == True:
+        if os.path.exists(str(storage_dir or '')) == True:
             self.storage_dir = storage_dir
             tmp_storage = 'STORAGE_DIR = ' + storage_dir + '\n'
         else:
-            print 'storage dir {} does not exist'.format('a')
+            print 'storage dir <{}> does not exist'.format(str(storage_dir or ''))
 
         with open('.config', 'w') as f:
             f.write(tmp_database)
