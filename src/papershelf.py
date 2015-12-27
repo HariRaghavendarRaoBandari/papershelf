@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import argparse
+import os
 from item import *
 
 parser = argparse.ArgumentParser(description = 'A simple paper organization tool',
@@ -42,13 +43,38 @@ class PaperShelf(item):
         self.areas = ['computer science']
 
     def configure(self, database_dir, storage_dir):
-        """Configure papershelf database and storage_dir
+        """Configure papershelf database_dir and storage_dir
 
         """
-        print "configure papershelf"
+        tmp_database = ''
+        tmp_storage = ''
 
-    def add(self, area, field, subfield, problem, name, title, year, conference,
-            description):
+        if os.path.exists('.config') == True:
+            with open('.config', 'r') as f:
+                for line in f:
+                    if 'DATABASE_DIR' in line.split():
+                        tmp_database = line
+                    if 'STORAGE_DIR' in line.split():
+                        tmp_storage = line
+
+        if os.path.exists(database_dir) == True:
+            self.database_dir = database_dir
+            tmp_database = 'DATABASE_DIR = ' + database_dir + '\n'
+        else:
+            print 'database dir {} does not exist'.format('a')
+
+        if os.path.exists(storage_dir) == True:
+            self.storage_dir = storage_dir
+            tmp_storage = 'STORAGE_DIR = ' + storage_dir + '\n'
+        else:
+            print 'storage dir {} does not exist'.format('a')
+
+        with open('.config', 'w') as f:
+            f.write(tmp_database)
+            f.write(tmp_storage)
+
+    def add(self, area, field, subfield, problem, 
+            name, title, year, conference, description):
         print "add papershelf"
 
     def remove(self, area, field, subfield, problem, name):
@@ -66,8 +92,10 @@ if __name__ == "__main__":
         allshelf.add(args.area, args.field, args.subfield, args.problem, 
                      args.name, args.title, args.year, args.conference, args.description)
     elif args.command == 'remove':
-        allshelf.remove(args.area, args.field, args.subfield, args.problem, args.name)
+        allshelf.remove(args.area, args.field, args.subfield, 
+                        args.problem, args.name)
     else:
-        allshelf.show(args.area, args.field, args.subfield, args.problem, args.name)
+        allshelf.show(args.area, args.field, args.subfield, 
+                      args.problem, args.name)
 
     print 'Thanks for using papershelf v0.1 :D'
