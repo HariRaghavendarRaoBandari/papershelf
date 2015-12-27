@@ -2,6 +2,7 @@
 
 import argparse
 import os
+import logging
 from item import *
 
 parser = argparse.ArgumentParser(description = 'A simple paper organization tool',
@@ -84,6 +85,8 @@ class PaperShelf(item):
         with open('.config', 'w') as f:
             f.write(tmp_database)
             f.write(tmp_storage)
+            self.add_log('configure {}'.format(tmp_database.replace('\n', '')))
+            self.add_log('configure {}'.format(tmp_storage.replace('\n', '')))
 
     def add(self, area, field, subfield, problem, 
             name, title, year, conference, description, verbosity):
@@ -105,6 +108,11 @@ class PaperShelf(item):
         print "show papershelf"
 
 if __name__ == "__main__":
+    logging.basicConfig(filename='.papershelf.log', format='%(asctime)s %(message)s', 
+                        datefmt='%m/%d/%Y %I:%M:%S %p', 
+                        level = logging.INFO)
+    logging.info('Started this transaction')
+
     allshelf = PaperShelf()
 
     if args.command == 'configure':
@@ -119,5 +127,7 @@ if __name__ == "__main__":
     else:
         allshelf.show(args.area, args.field, args.subfield, args.problem,
                       args.name, args.verbosity)
+
+    logging.info('Finished this transaction')
 
     print 'Thanks for using papershelf v0.1 :D'
