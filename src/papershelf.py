@@ -62,14 +62,20 @@ class PaperShelf(item):
         if os.path.exists(str(database_dir or '')) == True:
             self.database_dir = database_dir
             tmp_database = 'DATABASE_DIR = ' + database_dir + '\n'
+            if verbosity >= 1:
+                print 'database dir <{}> has been updated.'.format(
+                str(database_dir or ''))
         else:
             if verbosity >= 1:
-                print 'database dir <{}> does not exist'.format(
+                print 'database dir <{}> does not exist.'.format(
                 str(database_dir or ''))
 
         if os.path.exists(str(storage_dir or '')) == True:
             self.storage_dir = storage_dir
             tmp_storage = 'STORAGE_DIR = ' + storage_dir + '\n'
+            if verbosity >= 1:
+                print 'storage dir <{}> has been updated.'.format(
+                str(storage_dir or ''))
         else:
             if verbosity >= 1:
                 print 'storage dir <{}> does not exist'.format(
@@ -81,12 +87,21 @@ class PaperShelf(item):
 
     def add(self, area, field, subfield, problem, 
             name, title, year, conference, description, verbosity):
+        """Add papershelf info based on input parameters (i.e. area, field, etc.)
+
+        """
         print "add papershelf"
 
     def remove(self, area, field, subfield, problem, name, verbosity):
+        """Remove papershelf info based on input parameters (i.e. area, field, etc.)
+
+        """
         print "remove papershelf"
 
     def show(self, area, field, subfield, problem, name, verbosity):
+        """Show papershelf info based on input parameters (i.e. area, field, etc.)
+
+        """
         print "show papershelf"
 
 if __name__ == "__main__":
