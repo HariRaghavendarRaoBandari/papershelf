@@ -7,3 +7,6 @@ class item:
 
     def add_log(self, message):
         logging.info(message)
+
+    def add(self):
+        pass

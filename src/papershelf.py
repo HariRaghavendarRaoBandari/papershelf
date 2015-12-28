@@ -3,6 +3,7 @@
 import argparse
 import os
 import logging
+from shelf import *
 from item import *
 
 parser = argparse.ArgumentParser(description = 'A simple paper organization tool',
@@ -17,7 +18,7 @@ parser.add_argument('--database',
 		    help = 'Directory saving the papershelf database')
 parser.add_argument('--storage',
 		    help = 'Directory saving all recorded papers')
-parser.add_argument('-a', '--area', default = 'computer science',
+parser.add_argument('-a', '--area', default = 'ComputerScience',
 		    help = 'Research area in the specified papershelf')
 parser.add_argument('-f', '--field',
 		    help = 'Field in the specified research area')
@@ -43,7 +44,25 @@ class PaperShelf(item):
     def __init__(self):
         self.database_dir = ''
         self.storage_dir = ''
-        self.areas = ['computer science']
+        self.shelves = []
+
+        self.__initialize_configs()
+        self.__initialize_areas()
+
+    def __initialize_configs(self):
+        if os.path.exists('.config') == True:
+            with open('.config', 'r') as f:
+                for line in f:
+                    if 'DATABASE_DIR' in line.split():
+                        self.database_dir = line.split()[2]
+                    if 'STORAGE_DIR' in line.split():
+                        self.storage_dir = line.split()[2]
+
+    def __initialize_areas(self):
+        if os.path.exists('.area') == True:
+            with open('.area', 'r') as f:
+                for line in f:
+                    self.shelves.append(shelf(line))
 
     def configure(self, database_dir, storage_dir, verbosity):
         """Configure papershelf database_dir and storage_dir
@@ -64,47 +83,97 @@ class PaperShelf(item):
             self.database_dir = database_dir
             tmp_database = 'DATABASE_DIR = ' + database_dir + '\n'
             if verbosity >= 1:
-                print 'database dir <{}> has been updated.'.format(
-                str(database_dir or ''))
+                print 'configure database dir {}'.format(
+                      str(database_dir or ''))
         else:
             if verbosity >= 1:
-                print 'database dir <{}> does not exist.'.format(
-                str(database_dir or ''))
+                print 'invalid database dir {}'.format(
+                      str(database_dir or ''))
 
         if os.path.exists(str(storage_dir or '')) == True:
             self.storage_dir = storage_dir
             tmp_storage = 'STORAGE_DIR = ' + storage_dir + '\n'
             if verbosity >= 1:
-                print 'storage dir <{}> has been updated.'.format(
-                str(storage_dir or ''))
+                print 'configure storage dir {}'.format(
+                      str(storage_dir or ''))
         else:
             if verbosity >= 1:
-                print 'storage dir <{}> does not exist'.format(
-                str(storage_dir or ''))
+                print 'configure storage dir {}'.format(
+                      str(storage_dir or ''))
 
         with open('.config', 'w') as f:
             f.write(tmp_database)
             f.write(tmp_storage)
-            self.add_log('configure {}'.format(tmp_database.replace('\n', '')))
-            self.add_log('configure {}'.format(tmp_storage.replace('\n', '')))
+            self.add_log('configure database dir {}'.format(
+                        tmp_database.replace('\n', '')))
+            self.add_log('configure storage dir {}'.format(
+                        tmp_storage.replace('\n', '')))
 
     def add(self, area, field, subfield, problem, 
             name, title, year, conference, description, verbosity):
         """Add papershelf info based on input parameters (i.e. area, field, etc.)
 
         """
-        print "add papershelf"
+        if os.path.exists(self.database_dir) == False:
+            print "Please configure valid DATABASE_DIR path before adding"
+            return
+        if os.path.exists(self.storage_dir) == False:
+            print "Please configure valid STORAGE_DIR path before adding"
+            return
+
+        if area is None:
+            area = 'ComputerScience'
+
+        for s in self.shelves:
+            if area == s.get_area():
+               s.add(self.database_dir + '/' + area, self.storage_dir + '/' + area, 
+                     field, subfield, problem, name, title, year, conference, 
+                     description, verbosity)
+        else:
+            ok = raw_input('Are you sure to add area {} --> '.format(area))
+            if ok in ('y', 'ye', 'yes', 'Y', 'YE', 'YES'):
+                self.shelves.append(shelf(area))
+                if os.path.exists(self.database_dir + '/' + area) == False:
+                    os.makedirs(self.database_dir + '/' + area)
+                if os.path.exists(self.storage_dir + '/' + area) == False:
+                    os.makedirs(self.storage_dir + '/' + area)
+                with open('.area', 'a') as f:
+                    f.write(area + '\n')
+
+                if verbosity >= 1:
+                    print 'add area {}'.format(area)
+                self.add_log('add area {}'.format(area))
+
+                for s in self.shelves:
+                    if area == s.get_area():
+                        s.add(self.database_dir + '/' + area, self.storage_dir + '/' +
+                              area, field, subfield, problem, name, title, year, 
+                              conference, description, verbosity)
 
     def remove(self, area, field, subfield, problem, name, verbosity):
         """Remove papershelf info based on input parameters (i.e. area, field, etc.)
 
         """
+        if os.path.exists(self.database_dir) == False:
+            print "Please configure valid DATABASE_DIR path before removing"
+            return
+        if os.path.exists(self.storage_dir) == False:
+            print "Please configure valid STORAGE_DIR path before removing"
+            return
+
         print "remove papershelf"
 
     def show(self, area, field, subfield, problem, name, verbosity):
         """Show papershelf info based on input parameters (i.e. area, field, etc.)
 
         """
+        if os.path.exists(self.database_dir) == False:
+            print "Please configure valid DATABASE_DIR path before showing"
+            return
+        if os.path.exists(self.storage_dir) == False:
+            print "Please configure valid STORAGE_DIR path before showing"
+            return
+
         print "show papershelf"
 
 if __name__ == "__main__":
