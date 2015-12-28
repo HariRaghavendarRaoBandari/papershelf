@@ -3,6 +3,7 @@
 import argparse
 import os
 import logging
+import shutil
 from shelf import *
 from item import *
 
@@ -62,7 +63,7 @@ class PaperShelf(item):
         if os.path.exists('.area') == True:
             with open('.area', 'r') as f:
                 for line in f:
-                    self.shelves.append(shelf(line))
+                    self.shelves.append(shelf(line.replace('\n', '')))
 
     def configure(self, database_dir, storage_dir, verbosity):
         """Configure papershelf database_dir and storage_dir
@@ -161,7 +162,33 @@ class PaperShelf(item):
             print "Please configure valid STORAGE_DIR path before removing"
             return
 
-        print "remove papershelf"
+        if area is None:
+            if verbosity >= 1:
+                print 'Please indicate remove area'
+            self.add_log('Please indicate remove area')
+            return
+
+        for s in self.shelves[:]:
+            if area == s.get_area():
+                if field is None:
+                    ok = raw_input('Are you sure to delete area {} --> '.format(area))
+                    if ok in ('y', 'ye', 'yes', 'Y', 'YE', 'YES'):
+                        self.shelves.remove(s)
+                        if os.path.exists(self.database_dir + '/' + area) == True:
+                            shutil.rmtree(self.database_dir + '/' + area)
+                        if os.path.exists(self.storage_dir + '/' + area) == True:
+                            shutil.rmtree(self.storage_dir + '/' + area)
+
+                        if verbosity >= 1:
+                            print 'remove area {}'.format(area)
+                        self.add_log('remove area {}'.format(area))
+                else:
+                    s.remove(self.database_dir + '/' + area, self.storage_dir + '/' +
+                             area, field, subfield, problem, name, verbosity)
+
+        with open('.area', 'w') as f:
+            for s in self.shelves[:]:
+                f.write(s.get_area() + '\n')
 
     def show(self, area, field, subfield, problem, name, verbosity):
         """Show papershelf info based on input parameters (i.e. area, field, etc.)
@@ -173,6 +200,13 @@ class PaperShelf(item):
         if os.path.exists(self.storage_dir) == False:
             print "Please configure valid STORAGE_DIR path before showing"
             return
+
+        if area is None:
+            if verbosity >= 1:
+                print 'Please indicate show area'
+            self.add_log('Please indicate show area')
+            return
+
 
         print "show papershelf"
 

@@ -12,3 +12,6 @@ class shelf(item):
     def add(self, dpath, spath, field, subfield, problem, name, title,
             year, conference, description, verbosity):
         pass
+
+    def remove(self, dpath, spath, field, subfield, problem, name, verbosity):
+        pass

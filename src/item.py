@@ -10,3 +10,6 @@ class item:
 
     def add(self):
         pass
+
+    def remove(self):
+        pass
