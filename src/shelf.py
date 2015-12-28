@@ -15,3 +15,6 @@ class shelf(item):
 
     def remove(self, dpath, spath, field, subfield, problem, name, verbosity):
         pass
+
+    def show(self, dpath, spath, field, subfield, problem, name, verbosity):
+        pass

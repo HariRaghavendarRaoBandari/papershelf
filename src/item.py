@@ -13,3 +13,6 @@ class item:
 
     def remove(self):
         pass
+
+    def show(self):
+        pass

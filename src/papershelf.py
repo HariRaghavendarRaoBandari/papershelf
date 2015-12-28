@@ -115,11 +115,7 @@ class PaperShelf(item):
         """Add papershelf info based on input parameters (i.e. area, field, etc.)
 
         """
-        if os.path.exists(self.database_dir) == False:
-            print "Please configure valid DATABASE_DIR path before adding"
-            return
-        if os.path.exists(self.storage_dir) == False:
-            print "Please configure valid STORAGE_DIR path before adding"
+        if self.__path_check(self.database_dir, self.storage_dir, 'adding') == False:
             return
 
         if area is None:
@@ -127,9 +123,10 @@ class PaperShelf(item):
 
         for s in self.shelves:
             if area == s.get_area():
-               s.add(self.database_dir + '/' + area, self.storage_dir + '/' + area, 
+                s.add(self.database_dir + '/' + area, self.storage_dir + '/' + area, 
                      field, subfield, problem, name, title, year, conference, 
                      description, verbosity)
+                break
         else:
             ok = raw_input('Are you sure to add area {} --> '.format(area))
             if ok in ('y', 'ye', 'yes', 'Y', 'YE', 'YES'):
@@ -155,17 +152,7 @@ class PaperShelf(item):
         """Remove papershelf info based on input parameters (i.e. area, field, etc.)
 
         """
-        if os.path.exists(self.database_dir) == False:
-            print "Please configure valid DATABASE_DIR path before removing"
-            return
-        if os.path.exists(self.storage_dir) == False:
-            print "Please configure valid STORAGE_DIR path before removing"
-            return
-
-        if area is None:
-            if verbosity >= 1:
-                print 'Please indicate remove area'
-            self.add_log('Please indicate remove area')
+        if self.__path_check(self.database_dir, self.storage_dir, 'removing') == False:
             return
 
         for s in self.shelves[:]:
@@ -194,43 +181,56 @@ class PaperShelf(item):
         """Show papershelf info based on input parameters (i.e. area, field, etc.)
 
         """
-        if os.path.exists(self.database_dir) == False:
-            print "Please configure valid DATABASE_DIR path before showing"
-            return
-        if os.path.exists(self.storage_dir) == False:
-            print "Please configure valid STORAGE_DIR path before showing"
+        if self.__path_check(self.database_dir, self.storage_dir, 'showing') == False:
             return
 
-        if area is None:
-            if verbosity >= 1:
-                print 'Please indicate show area'
-            self.add_log('Please indicate show area')
-            return
+        if area == 'all':
+            for s in self.shelves[:]:
+                print '{}'.format(s.get_area())
+        else:
+            print '{}'.format(area)
+            for s in self.shelves[:]:
+                if area == s.get_area() and field is not None:
+                    s.show(self.databasefield, subfield, problem, name, verbosity)
 
+        if verbosity >= 1:
+            # don't mix up with the output
+            # print 'show area {}'.format(area)
+            pass
+        self.add_log('show area {}'.format(area))
 
-        print "show papershelf"
+    def __path_check(self, dpath, spath, message):
+        if os.path.exists(dpath) == False:
+            print "Please configure valid DATABASE_DIR path before {}".format(message)
+            return False
+        if os.path.exists(spath) == False:
+            print "Please configure valid STORAGE_DIR path before {}".format(message)
+            return False
+
+        return True
 
 if __name__ == "__main__":
     logging.basicConfig(filename='.papershelf.log', format='%(asctime)s %(message)s', 
                         datefmt='%m/%d/%Y %I:%M:%S %p', 
                         level = logging.INFO)
-    logging.info('Started this transaction')
-
     allshelf = PaperShelf()
 
     if args.command == 'configure':
+        logging.info('Start configure transaction')
         allshelf.configure(args.database, args.storage, args.verbosity)
     elif args.command == 'add':
+        logging.info('Start add transaction')
         allshelf.add(args.area, args.field, args.subfield, args.problem,
                      args.name, args.title, args.year, args.conference, 
                      args.description, args.verbosity)
     elif args.command == 'remove':
+        logging.info('Start remove transaction')
         allshelf.remove(args.area, args.field, args.subfield, args.problem,
                         args.name, args.verbosity)
     else:
+        logging.info('Start show transaction')
         allshelf.show(args.area, args.field, args.subfield, args.problem,
                       args.name, args.verbosity)
 
-    logging.info('Finished this transaction')
-
+    logging.info('End transaction')
     print 'Thanks for using papershelf v0.1 :D'
