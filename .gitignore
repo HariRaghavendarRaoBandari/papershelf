@@ -1,3 +1,9 @@
 *.DS_Store
 *.pyc
 *.log
+.config
+.area
+.field
+.subfield
+.problem
+.paper
