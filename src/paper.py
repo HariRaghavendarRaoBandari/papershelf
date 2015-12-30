@@ -26,7 +26,7 @@ class Problem(item):
         if os.path.exists(self.dpath + '/' + self.subfield + '.txt') == True:
             with open(self.dpath + '/' + self.subfield + '.txt', 'r') as f:
                 for line in f:
-                    str = line.split('|')
+                    str = line.replace('\n', '').split('|')
                     self.papers.append(Paper(str[0], str[1], str[2], str[3], str[4]))
 
     def get_problem(self):
@@ -71,6 +71,29 @@ class Problem(item):
                     print 'no file {} founded'.format(name)
                 self.add_log('no file {} founded'.format(name))
 
+    def remove(self, dpath, spath, name, verbosity):
+        for i in self.indexes[:]:
+            if i == name:
+                self.indexes.remove(i)
+
+        for p in self.papers[:]:
+            if name == p.get_name():
+                self.papers.remove(p)
+
+        with open(dpath + '/' + '.paper', 'w') as f:
+            for i in self.indexes[:]:
+                f.write(i + '\n')
+        with open(dpath + '/' + self.subfield + '.txt', 'w') as f:
+            for p in self.papers[:]:
+                f.write(p.get_name() + '|' + p.get_title() + '|' + p.get_year() + '|' +
+                        p.get_conference() + '|' + p.get_description() + '\n')
+
+        os.remove(spath + '/' + name)
+
+        if verbosity >= 1:
+            print 'remove paper {}'.format(name)
+        self.add_log('remove paper {}'.format(name))
+
 class Paper(item):
     def __init__(self, name, title, year, conference, description):
         self.name = name
@@ -78,3 +101,18 @@ class Paper(item):
         self.year = year
         self.conference = conference
         self.description = description
+
+    def get_name(self):
+        return self.name
+
+    def get_title(self):
+        return self.title
+
+    def get_year(self):
+        return self.year
+
+    def get_conference(self):
+        return self.conference
+
+    def get_description(self):
+        return self.description

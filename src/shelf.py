@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import os
+import shutil
 from item import *
 from cabinet import *
 
@@ -54,7 +55,27 @@ class Shelf(item):
                               verbosity)
 
     def remove(self, dpath, spath, field, subfield, problem, name, verbosity):
-        pass
+        for f in self.fields[:]:
+            if field == f.get_field():
+                if subfield is None:
+                    ok = raw_input('Are you sure to delete field {} --> '.format(field))
+                    if ok in ('y', 'ye', 'yes', 'Y', 'YE', 'YES'):
+                        self.fields.remove(f)
+                        if os.path.exists(dpath + '/' + field) == True:
+                            shutil.rmtree(dpath + '/' + field)
+                        if os.path.exists(spath + '/' + field) == True:
+                            shutil.rmtree(spath + '/' + field)
+
+                        if verbosity >= 1:
+                            print 'remove field {}'.format(field)
+                        self.add_log('remove field {}'.format(field))
+                else:
+                    f.remove(dpath + '/' + field, spath + '/' + field, subfield,
+                             problem, name, verbosity)
+
+        with open(dpath + '/' + '.field', 'w') as f:
+            for fe in self.fields[:]:
+                f.write(fe.get_field() + '\n')
 
     def show(self, dpath, spath, field, subfield, problem, name, verbosity):
         pass

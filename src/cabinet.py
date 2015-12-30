@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import os
+import shutil
 from item import *
 from paper import *
 
@@ -47,6 +48,25 @@ class SubCabinet(item):
                     if problem == p.get_problem():
                         p.add(dpath, spath, name, title, year, conference, description,
                               verbosity)
+
+    def remove(self, dpath, spath, problem, name, verbosity):
+        for p in self.problems[:]:
+            if problem == p.get_problem():
+                if name is None:
+                    ok = raw_input('Are you sure to delete problem {} --> '.format(
+                                   problem))
+                    if ok in ('y', 'ye', 'yes', 'Y', 'YE', 'YES'):
+                        self.problems.remove(p)
+
+                        if verbosity >= 1:
+                            print 'remove problem {}'.format(problem)
+                        self.add_log('remove problem {}'.format(problem))
+                else:
+                    p.remove(dpath, spath, name, verbosity)
+
+        with open(dpath + '/' + '.problem', 'w') as f:
+            for p in self.problems[:]:
+                f.write(p.get_problem() + '\n')
 
 class Cabinet(item):
     def __init__(self, field, dpath):
@@ -96,3 +116,28 @@ class Cabinet(item):
                     if subfield == sf.get_subfield():
                         sf.add(dpath + '/' + subfield, spath + '/' + subfield, problem,
                                name, title, year, conference, description, verbosity)
+
+        self.subfields = []
+    def remove(self, dpath, spath, subfield, problem, name, verbosity):
+        for sf in self.subfields[:]:
+            if subfield == sf.get_subfield():
+                if problem is None:
+                    ok = raw_input('Are you sure to delete subfield {} --> '.format(
+                                   subfield))
+                    if ok in ('y', 'ye', 'yes', 'Y', 'YE', 'YES'):
+                        self.subfields.remove(sf)
+                        if os.path.exists(dpath + '/' + subfield) == True:
+                            shutil.rmtree(dpath + '/' + subfield)
+                        if os.path.exists(spath + '/' + subfield) == True:
+                            shutil.rmtree(spath + '/' + subfield)
+
+                        if verbosity >= 1:
+                            print 'remove subfield {}'.format(subfield)
+                        self.add_log('remove subfield {}'.format(subfield))
+                else:
+                    sf.remove(dpath + '/' + subfield, spath + '/' + subfield, 
+                              problem, name, verbosity)
+
+        with open(dpath + '/' + '.subfield', 'w') as f:
+            for sf in self.subfields[:]:
+                f.write(sf.get_subfield() + '\n')
