@@ -94,6 +94,24 @@ class Problem(item):
             print 'remove paper {}'.format(name)
         self.add_log('remove paper {}'.format(name))
 
+    def show(self, name, verbosity):
+        if name == 'all':
+            for p in self.papers[:]:
+                print '|-|-|-|-{}'.format('Paper Background: ' + p.get_year() +
+                                          '\t' + p.get_conference() + '\t' +
+                                          p.get_name())
+                print '|-|-|-|-|-|-|-{}'.format('Title: ' + p.get_title())
+                print '|-|-|-|-|-|-|-{}'.format('Description: ' + p.get_description())
+        else:
+            for p in self.papers[:]:
+                if name == p.get_name():
+                    print '|-|-|-|-{}'.format('Paper Background: ' + p.get_year() +
+                                              '\t' + p.get_conference() + '\t' +
+                                              p.get_name())
+                    print '|-|-|-|-|-|-|-{}'.format('Title: ' + p.get_title())
+                    print '|-|-|-|-|-|-|-{}'.format('Description: ' + 
+                                                    p.get_description())
+
 class Paper(item):
     def __init__(self, name, title, year, conference, description):
         self.name = name

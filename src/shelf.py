@@ -77,5 +77,18 @@ class Shelf(item):
             for fe in self.fields[:]:
                 f.write(fe.get_field() + '\n')
 
-    def show(self, dpath, spath, field, subfield, problem, name, verbosity):
-        pass
+    def show(self, field, subfield, problem, name, verbosity):
+        if field == 'all':
+            for f in self.fields[:]:
+                print '|-{}'.format(f.get_field())
+        else:
+            print '|-{}'.format(field)
+            for f in self.fields[:]:
+                if field == f.get_field() and subfield is not None:
+                    f.show(subfield, problem, name, verbosity)
+
+        if verbosity >= 1:
+            # don't mix up with the output
+            # print 'show field {}'.format(field)
+            pass
+        self.add_log('show field {}'.format(field))

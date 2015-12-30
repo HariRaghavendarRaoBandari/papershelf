@@ -68,6 +68,16 @@ class SubCabinet(item):
             for p in self.problems[:]:
                 f.write(p.get_problem() + '\n')
 
+    def show(self, problem, name, verbosity):
+        if problem == 'all':
+            for p in self.problems[:]:
+                print '|-|-|-{}'.format(p.get_problem())
+        else:
+            print '|-|-|-{}'.format(problem)
+            for p in self.problems[:]:
+                if problem == p.get_problem() and name is not None:
+                    p.show(name, verbosity)
+
 class Cabinet(item):
     def __init__(self, field, dpath):
         self.field = field
@@ -141,3 +151,19 @@ class Cabinet(item):
         with open(dpath + '/' + '.subfield', 'w') as f:
             for sf in self.subfields[:]:
                 f.write(sf.get_subfield() + '\n')
+
+    def show(self, subfield, problem, name, verbosity):
+        if subfield == 'all':
+            for sf in self.subfields[:]:
+                print '|-|-{}'.format(sf.get_subfield())
+        else:
+            print '|-|-{}'.format(subfield)
+            for sf in self.subfields[:]:
+                if subfield == sf.get_subfield() and problem is not None:
+                    sf.show(problem, name, verbosity)
+
+        if verbosity >= 1:
+            # don't mix up with the output
+            # print 'show subfield {}'.format(subfield)
+            pass
+        self.add_log('show subfield {}'.format(subfield))

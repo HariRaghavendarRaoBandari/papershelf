@@ -223,7 +223,7 @@ class PaperShelf(item):
             print '{}'.format(area)
             for s in self.shelves[:]:
                 if area == s.get_area() and field is not None:
-                    s.show(self.databasefield, subfield, problem, name, verbosity)
+                    s.show(field, subfield, problem, name, verbosity)
 
         if verbosity >= 1:
             # don't mix up with the output
