@@ -81,6 +81,7 @@ class Shelf(item):
         if field == 'all':
             for f in self.fields[:]:
                 print '|-{}'.format(f.get_field())
+                f.show('all', 'all', 'all', verbosity)
         else:
             print '|-{}'.format(field)
             for f in self.fields[:]:

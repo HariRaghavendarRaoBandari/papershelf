@@ -1,1 +1,0 @@
---> The Yin and Yang of Hardware Heterogeneity: Can Software Survive, 2013, Kathryn S. McKinley

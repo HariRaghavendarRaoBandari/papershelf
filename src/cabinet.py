@@ -72,6 +72,7 @@ class SubCabinet(item):
         if problem == 'all':
             for p in self.problems[:]:
                 print '|-|-|-{}'.format(p.get_problem())
+                p.show('all', verbosity)
         else:
             print '|-|-|-{}'.format(problem)
             for p in self.problems[:]:
@@ -156,6 +157,7 @@ class Cabinet(item):
         if subfield == 'all':
             for sf in self.subfields[:]:
                 print '|-|-{}'.format(sf.get_subfield())
+                sf.show('all', 'all', verbosity)
         else:
             print '|-|-{}'.format(subfield)
             for sf in self.subfields[:]:

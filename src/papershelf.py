@@ -12,7 +12,7 @@ parser = argparse.ArgumentParser(description = 'A simple paper organization tool
 				 formatter_class = argparse.RawTextHelpFormatter)
 parser.add_argument("command", choices = ['configure', 'add', 'remove', 'show'],
 		    help = 'Four commands supported by papershelf\n'
-		           'Options supported by configure: --database --storage' 
+		           'Options supported by configure: --database --storage ' 
                            '--searchdir\n'
 			   'Options supported by add:-a -f -s -p -n -t -y -c -d\n'
 			   'Options supported by remove: -a -f -s -p -n\n'
@@ -219,6 +219,7 @@ class PaperShelf(item):
         if area == 'all':
             for s in self.shelves[:]:
                 print '{}'.format(s.get_area())
+                s.show('all', 'all', 'all', 'all', verbosity)
         else:
             print '{}'.format(area)
             for s in self.shelves[:]:
