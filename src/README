@@ -1,7 +1,7 @@
 # Description: A simple tool for paper organization
 # Developer: Ming Liu
 
-# Motivation: 
+# I. Motivation: 
 # Categorizing academic papers is a difficult but useful job, especially in some
 # areas (i.e. computer science) which have tons of (good) papers. A good category
 # helps you (1) track latest problems and techniques; and (2) understand related
@@ -9,27 +9,36 @@
 # paper with random words/notes, (2) saving into a local or cloud storage, and
 # (3) simply retrieving. There is no summarization, thinking, and categorization.
 # The papershelf tool is developed to solve this problem. Its key idea is "thinking
-# while recording".
+# while recording". papershelf requires some thoughts (i.e. area, field, subfield,
+# problem, note, etc.) before adding/removing into the database.
 # How does it work? Keep reading or try :D
 
-# Papershelf: Design And Implementation
+# II. Papershelf: Design and Implementation
 # (1) papershelf design
-# This tool organizes papers as follows:
+# papershelf is a very simple tool. It organizes papers as follows:
 #
 #                area --> field --> subfield --> problem --> paper
 #
+# The paper item then comes with a 3-tuple (background, title, description). So before
+# adding/removing/showing details from the papershelf, you need to figure out all or 
+# part of above information by carefully reading.
 # Here are two examples:
 # papershelf --> computer science
 #                --> Architecture
 #                    --> Datacenter
 #                        --> Benchmarking
-#                            --> 2012, ASPLOS, Clearing the Clouds: A Study of Emerging
-#                                              Scale-out Workloads on Modern Hardware
+#                            --> Background: 2012, ASPLOS, clearclouds.pdf
+#                            --> Title: Clearing the Clouds: A Study of Emerging Scale-out
+#                            --> Workloads on Modern Hardware
+#                            --> Description: Investigating architecture implications 
+#                            --> under emerging cloud workloads
 #            --> computer science
 #                --> System
 #                    --> Energy&Power
 #                        --> PowerManagement
-#                            --> 2015, SOSP, Software Defined Batteries
+#                            --> Background: 2015, SOSP, battery.pdf
+#                            --> Title: Software Defined Batteries
+#                            --> Description: How to manage various power resources
 #
 # The above case presents two transactions:
 # 
@@ -38,10 +47,69 @@
 #     subfield --> Datacenter
 #     problem --> Benchmarking
 #     paper --> 2012, ASPLOS, Clearing the Clouds: A Study of Emerging Scale-out 
-#               Workloads on Modern Hardware
+#               Workloads on Modern Hardware, investigating architecture implications
+#               under emerging cloud workloads
 #
 #     area --> computer science
 #     field --> System
 #     subfield --> Energy&Power
 #     problem --> PowerManagement
-#     paper --> 2015, SOSP, Software Defined Batteries
+#     paper --> 2015, SOSP, Software Defined Batteries, how to manage various power
+#               resources
+#
+# (2) papershelf implementation
+# There are 7 classes. item is the base one while the other six (PaperShelf, Shelf, 
+# Cabinet, SubCabinet, Problem, Paper) inherit from it. There're four major operations
+# supported: configure, add, remove, and show.
+#     configure --> set up database, storage, and searchdir directories
+#     add --> add info into the papershelf
+#     remove --> remove info from the papershelf
+#     show --> show info from the papershelf
+#
+# The following shows the -h option of papershelf
+# usage: papershelf.py [-h] [--database DATABASE] [--storage STORAGE]
+#                     [--searchdir SEARCHDIR] [-a AREA] [-f FIELD]
+#                     [-s SUBFIELD] [-p PROBLEM] [-n NAME] [-t TITLE] [-y YEAR]
+#                     [-c CONFERENCE] [-d DESCRIPTION] [-v]
+#                     {configure,add,remove,show}
+#
+# A simple paper organization tool
+#
+# positional arguments:
+# {configure,add,remove,show}
+#                        Four commands supported by papershelf
+#                        Options supported by configure: --database --storage--searchdir
+#                        Options supported by add:-a -f -s -p -n -t -y -c -d
+#                        Options supported by remove: -a -f -s -p -n
+#                        Options supported by show: -a -f -s -p -n
+#
+# optional arguments:
+#   -h, --help            show this help message and exit
+#   --database DATABASE   Directory saving the papershelf database
+#   --storage STORAGE     Directory saving all recorded papers
+#   --searchdir SEARCHDIR
+#                         Directory for searching the file
+#   -a AREA, --area AREA  Research area in the specified papershelf
+#   -f FIELD, --field FIELD
+#                         Field in the specified research area
+#   -s SUBFIELD, --subfield SUBFIELD
+#                         Subfield in the specified field
+#   -p PROBLEM, --problem PROBLEM
+#                         Problem in the subfiled
+#   -n NAME, --name NAME  Paper file name
+#   -t TITLE, --title TITLE
+#                         Paper title
+#   -y YEAR, --year YEAR  Paper published year
+#   -c CONFERENCE, --conference CONFERENCE
+#                         Paper published conference/journal/others
+#   -d DESCRIPTION, --description DESCRIPTION
+#                         Write some important notes
+#   -v, --verbosity       increase output verbosity
+#
+# III. Future support:
+# The current implementation uses local files to save data. In the future, papershelf 
+# will be developped in the following directions:
+# a. add a database;
+# b. add the cloud storage support;
+# c. reorgainze the code structure;
+# d. ......
