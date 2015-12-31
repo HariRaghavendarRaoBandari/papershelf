@@ -60,7 +60,7 @@
 # (2) papershelf implementation
 # There are 7 classes. item is the base one while the other six (PaperShelf, Shelf, 
 # Cabinet, SubCabinet, Problem, Paper) inherit from it. There're four major operations
-# supported: configure, add, remove, and show.
+# supported: configure, add, remove, and show. Every transaction is logged.
 #     configure --> set up database, storage, and searchdir directories
 #     add --> add info into the papershelf
 #     remove --> remove info from the papershelf
