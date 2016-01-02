@@ -112,4 +112,6 @@
 # a. add a database;
 # b. add the cloud storage support;
 # c. reorgainze the code structure;
-# d. ......
+# d. database compression;
+# e. multi-thread support;
+# f. ......
