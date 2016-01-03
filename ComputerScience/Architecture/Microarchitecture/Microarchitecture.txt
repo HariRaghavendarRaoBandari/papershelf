@@ -1,0 +1,1 @@
+haswellsurvey.pdf|An Energy Efficiency Feature Survey of the Intel Haswell Processor|2015|IPDPSW|A workshop paper presents great insights on energy efficient features of Haswell processors
