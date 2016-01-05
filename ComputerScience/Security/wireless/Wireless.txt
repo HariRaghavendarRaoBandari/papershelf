@@ -1,0 +1,1 @@
+ICDsecurity.pdf|Pacemakers and Implantable Cardiac Defibrillators: Software Radio Attacks and Zero-Power Defenses|2008|IEEE S&P|This paper explores the security and privacy properties of medical devices (i.e. ICDs). It uses reverse-engineering and eavesdropping methods to find the security hole.
