@@ -1,0 +1,1 @@
+kim_hpca08.pdf|System Level Analysis of Fast, Per-Core DVFS using On-Chip Switching Regulators|2008|HPCA|Model on-chip integrated regulators cost and demonstrate energy savings of per-core DVFS
