@@ -1,3 +1,4 @@
 kim_hpca08.pdf|System Level Analysis of Fast, Per-Core DVFS using On-Chip Switching Regulators|2008|HPCA|Model on-chip integrated regulators cost and demonstrate energy savings of per-core DVFS
 taco_2011_eyerman.pdf|Fine-Grained DVFS Using On-Chip Regulators|2011|TACO|Use micro-architecture hints for fine-grained on-chip DVFS design
 isci_micro_2006.pdf|An Analysis of Efficient Multi-Core Global Power Management Policies: Maximizing Performance for a Given Power Budget|2006|MICRO|Propose a set of global power managment poclies using per-core DVFS. Really coarsed grained
+canturk-micro2006-phase.pdf|Live, Runtime Phyase Monitoring and Prediction on Real System with Application to Dynamic Power Management|2006|MICRO|Detect application execution phases based on patterns. Use DVFS to improve efficiency.

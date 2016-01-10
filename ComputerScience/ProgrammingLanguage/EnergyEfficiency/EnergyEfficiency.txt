@@ -1,0 +1,1 @@
+wu_dynamic_p111.pdf|A Dynamic Compilation Framework for Controlling Microprocessor Energy and Performance|2005|MICRO|Integrate the DVFS technique with the dynamic comipling framework
