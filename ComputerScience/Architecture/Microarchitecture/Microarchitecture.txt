@@ -1,1 +1,2 @@
 haswellsurvey.pdf|An Energy Efficiency Feature Survey of the Intel Haswell Processor|2015|IPDPSW|A workshop paper presents great insights on energy efficient features of Haswell processors
+Tomasulo_CDB_1964.pdf|An Efficient Algorithm for Exploiting Multiple Arithmetic Units|1964|IBM Journal|Solve multiple instruciton execution problem via command data bus and reservation station
