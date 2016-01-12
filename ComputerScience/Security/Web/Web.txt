@@ -1,2 +1,2 @@
-sec14_pm.pdf|Password Managers: Attacks and Defenses|2014|USENIX Security|A good survey about password managers. Sweep attack and secure-fill defense
-AuthenticateSchemeEvaluation.pdf|The Quest to Replace Passwords: A Framework for Comparative Evaluation for Web Authentication Schemes|2012|IEEE SP|A good qualitive analysis paper on authentication schemes.
+PasswordManager|sec14_pm.pdf|Password Managers: Attacks and Defenses|2014|USENIX Security|A good survey about password managers. Sweep attack and secure-fill defense
+AuthenticationSchemeEvaluation|AuthenticateSchemeEvaluation.pdf|The Quest to Replace Passwords: A Framework for Comparative Evaluation for Web Authentication Schemes|2012|IEEE SP|A good qualitive analysis paper on authentication schemes.

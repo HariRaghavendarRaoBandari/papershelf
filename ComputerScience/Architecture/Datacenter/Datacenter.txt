@@ -1,1 +1,1 @@
-cloudsuite.pdf|Clearing the Clouds: A Study of Emerging Scale-out Workloads on Modern Hardware|2012|ASPLOS|Investigate c architecture implications for emerging cloud workloads on commodity servers
+Benchmarking|cloudsuite.pdf|Clearing the Clouds: A Study of Emerging Scale-out Workloads on Modern Hardware|2012|ASPLOS|Investigate c architecture implications for emerging cloud workloads on commodity servers

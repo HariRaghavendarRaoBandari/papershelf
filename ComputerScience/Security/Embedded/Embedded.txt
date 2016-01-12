@@ -1,1 +1,1 @@
-BodyScanner.pdf|Security Analysis of a Full-Body Scanner|2014|USENIX Security|This paper presents the security evaluation of the ASeecure 1000 full-body scanner. 
+BodyScannerSecurity|BodyScanner.pdf|Security Analysis of a Full-Body Scanner|2014|USENIX Security|This paper presents the security evaluation of the ASeecure 1000 full-body scanner. 

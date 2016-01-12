@@ -30,7 +30,7 @@ class SubCabinet(item):
 
         for p in self.problems:
             if problem == p.get_problem():
-                p.add(dpath, spath, name, title, year, conference, description,
+                p.add(dpath, spath, problem, name, title, year, conference, description,
                       verbosity)
                 break
         else:
@@ -46,7 +46,7 @@ class SubCabinet(item):
 
                 for p in self.problems:
                     if problem == p.get_problem():
-                        p.add(dpath, spath, name, title, year, conference, description,
+                        p.add(dpath, spath, problem, name, title, year, conference, description,
                               verbosity)
 
     def remove(self, dpath, spath, problem, name, verbosity):
@@ -72,12 +72,12 @@ class SubCabinet(item):
         if problem == 'all':
             for p in self.problems[:]:
                 print '|-|-|-{}'.format(p.get_problem())
-                p.show('all', verbosity)
+                p.show(p.get_problem(), 'all', verbosity)
         else:
             print '|-|-|-{}'.format(problem)
             for p in self.problems[:]:
                 if problem == p.get_problem() and name is not None:
-                    p.show(name, verbosity)
+                    p.show(problem, name, verbosity)
 
 class Cabinet(item):
     def __init__(self, field, dpath):

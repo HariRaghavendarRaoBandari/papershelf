@@ -27,12 +27,12 @@ class Problem(item):
             with open(self.dpath + '/' + self.subfield + '.txt', 'r') as f:
                 for line in f:
                     str = line.replace('\n', '').split('|')
-                    self.papers.append(Paper(str[0], str[1], str[2], str[3], str[4]))
+                    self.papers.append(Paper(str[0], str[1], str[2], str[3], str[4], str[5]))
 
     def get_problem(self):
         return self.problem
 
-    def add(self, dpath, spath, name, title, year, conference, description,
+    def add(self, dpath, spath, problem, name, title, year, conference, description,
             verbosity):
         if name is None:
             return
@@ -52,11 +52,11 @@ class Problem(item):
                         description = raw_input('Please enter the description: ')
 
                     self.indexes.append(name)
-                    self.papers.append(Paper(name, title, year, conference, description))
+                    self.papers.append(Paper(problem, name, title, year, conference, description))
                     with open(self.dpath + '/' + '.paper', 'a') as f:
                         f.write(name + '\n')
                     with open(self.dpath + '/' + self.subfield + '.txt', 'a') as f:
-                        f.write(name + '|' + title + '|' + year + '|' + conference
+                        f.write(problem + '|' + name + '|' + title + '|' + year + '|' + conference
                                 + '|' + description + '\n')
 
                     oldfile = os.path.join(dirpath, name)
@@ -85,7 +85,7 @@ class Problem(item):
                 f.write(i + '\n')
         with open(dpath + '/' + self.subfield + '.txt', 'w') as f:
             for p in self.papers[:]:
-                f.write(p.get_name() + '|' + p.get_title() + '|' + p.get_year() + '|' +
+                f.write(p.get_problem() + '|' + p.get_name() + '|' + p.get_title() + '|' + p.get_year() + '|' +
                         p.get_conference() + '|' + p.get_description() + '\n')
 
         os.remove(spath + '/' + name)
@@ -94,14 +94,15 @@ class Problem(item):
             print 'remove paper {}'.format(name)
         self.add_log('remove paper {}'.format(name))
 
-    def show(self, name, verbosity):
+    def show(self, problem, name, verbosity):
         if name == 'all':
             for p in self.papers[:]:
-                print '|-|-|-|-{}'.format('Paper Background: ' + p.get_year() +
-                                          '\t' + p.get_conference() + '\t' +
-                                          p.get_name())
-                print '|-|-|-|-|-|-|-{}'.format('Title: ' + p.get_title())
-                print '|-|-|-|-|-|-|-{}'.format('Description: ' + p.get_description())
+                if problem == p.get_problem():
+                    print '|-|-|-|-{}'.format('Paper Background: ' + p.get_year() +
+                                              '\t' + p.get_conference() + '\t' +
+                                              p.get_name())
+                    print '|-|-|-|-|-|-|-{}'.format('Title: ' + p.get_title())
+                    print '|-|-|-|-|-|-|-{}'.format('Description: ' + p.get_description())
         else:
             for p in self.papers[:]:
                 if name == p.get_name():
@@ -113,12 +114,16 @@ class Problem(item):
                                                     p.get_description())
 
 class Paper(item):
-    def __init__(self, name, title, year, conference, description):
+    def __init__(self, problem, name, title, year, conference, description):
+        self.problem = problem
         self.name = name
         self.title = title
         self.year = year
         self.conference = conference
         self.description = description
+
+    def get_problem(self):
+        return self.problem
 
     def get_name(self):
         return self.name
