@@ -1,3 +1,4 @@
 Characterization|haswellsurvey.pdf|An Energy Efficiency Feature Survey of the Intel Haswell Processor|2015|IPDPSW|A workshop paper presents great insights on energy efficient features of Haswell processors
 OutOfOrderExecution|Tomasulo_CDB_1964.pdf|An Efficient Algorithm for Exploiting Multiple Arithmetic Units|1964|IBM Journal|Solve multiple instruciton execution problem via command data bus and reservation station
 EventDrivenWebAppsImpact|zhu_micro15.pdf|Microarchitectural Implications of Event-driven Server-side Web Applications|2015|MICRO|Explore the impact of event-driven applications on pprocessor microarchitecture
+Characterization|Cray1.pdf|An Analysis of the CRAY-1 computer|1978|ISCA|A good discussion of the CRAY-1 computer, advances, llimitations, and mitigation methods
