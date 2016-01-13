@@ -1,0 +1,1 @@
+LineralizableRPC|p71-lee.pdf|Implementing Lineraizability at Large Scale and Low Latency|2015|SOSP|Discuss how to implement linearizability of RPC system in the RAMcloud
