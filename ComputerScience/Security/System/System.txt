@@ -1,0 +1,1 @@
+BrowserSecurity|chromium-security-architecture.pdf|The Security Architecture of the Chromium Browser|2008|Technical Report|A detailed analysis about Chromium Browser architecture and its security
