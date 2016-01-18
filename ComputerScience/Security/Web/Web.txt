@@ -1,3 +1,4 @@
 PasswordManager|sec14_pm.pdf|Password Managers: Attacks and Defenses|2014|USENIX Security|A good survey about password managers. Sweep attack and secure-fill defense
 AuthenticationSchemeEvaluation|AuthenticateSchemeEvaluation.pdf|The Quest to Replace Passwords: A Framework for Comparative Evaluation for Web Authentication Schemes|2012|IEEE SP|A good qualitive analysis paper on authentication schemes.
 BrowserDataEncryption|shadowcrypt-ccs14.pdf|ShadowCrypt: Encrypted Web Applications for Everyone|2014|CCS|Section2 give a good example about design space exploration
+JavaScriptMalwareDetection|usenixsec11b.pdf|ZOOZLE: Fast and Precise In-Browswer JavaScript Malware Detection|2011|USENIX Secrurity|An fast offline JavaScript Malware Detection method. Use the machine learning algorithm to detect the malware.
