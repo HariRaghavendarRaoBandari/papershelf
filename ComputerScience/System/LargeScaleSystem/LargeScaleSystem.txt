@@ -1,1 +1,2 @@
 LineralizableRPC|p71-lee.pdf|Implementing Lineraizability at Large Scale and Low Latency|2015|SOSP|Discuss how to implement linearizability of RPC system in the RAMcloud
+DynamicCausalMonitoring|p378-mace.pdf|Pivot Tracing: Dynamic Causal monitoring for Distributed Systems|2015|SOSP|Dynamic Causual Monitoring for the large distributed system. A happen-before relation is used. May be better to discuss with OOP aspect programming model.
