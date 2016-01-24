@@ -1,1 +1,2 @@
 Benchmarking|cloudsuite.pdf|Clearing the Clouds: A Study of Emerging Scale-out Workloads on Modern Hardware|2012|ASPLOS|Investigate c architecture implications for emerging cloud workloads on commodity servers
+EnergyPropotionalDatacenterNetworks|p338-abts.pdf|Energy Proportional Datacenter Networks|2010|ISCA|How to design energy-proportional datacenter networks to adapt to energy-proportional servers. Flatten butterfly topology and dynamic link rate iare the proposed techniques. 
