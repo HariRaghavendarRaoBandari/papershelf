@@ -1,0 +1,1 @@
+AndroidMalwareAnalysis|OAKLAND12.pdf|Dissecting Android Malware: Characterization and Evolution|2012|Okland|Anlayzing the Android malware, such as installation methods, evolution, etc.
