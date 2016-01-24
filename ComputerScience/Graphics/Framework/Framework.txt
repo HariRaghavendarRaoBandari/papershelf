@@ -1,0 +1,1 @@
+ProgrammableComputationalFramework|fcam.pdf|The Frankencamera: AN Experimental Platform for Computational Photography|2010|SIGGRAPH|A portable, programmable prototyped computational photography framework. Plain description with good impact.
