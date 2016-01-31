@@ -1,0 +1,1 @@
+FrameworkDesign|p121-palkar.pdf|E2: A Framework for NFV Applications|2015|SOSP|A good background description on NFV. They propose a scalable and application-agnostic scheduling framework.

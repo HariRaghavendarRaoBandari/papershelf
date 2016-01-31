@@ -1,3 +1,5 @@
 BrowserSecurity|chromium-security-architecture.pdf|The Security Architecture of the Chromium Browser|2008|Technical Report|A detailed analysis about Chromium Browser architecture and its security
 AndroidPermission|2011Androidpermissionsdemystified.pdf|Android Permission Demystified|2011|CCS|Andriod permission analysis. Permission map
 AndroidInformationFlow|Enck.pdf|TaintDroid: An Information-Flow Tracking System for Realtime Privacy Monitoring on Smartphones|2010|OSDI|Four-level information tracking mechanisms combined
+BootStrapingAnalysis|PaMcPe2010.pdf|Bootstrapping Trust in Commodity Computers|2010|Okland|A very important paper on Bootstrapping survey.
+ExploreVulFromPatches|apeg.pdf|Automatic Patch-Based Exploit Generation is Possible: Techniques and Implications|2008|IEEE Security&Privacy|An interesting problem. Exploring vulnerabilites based on patches.
