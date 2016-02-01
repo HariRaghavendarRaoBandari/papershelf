@@ -3,3 +3,5 @@ OutOfOrderExecution|Tomasulo_CDB_1964.pdf|An Efficient Algorithm for Exploiting 
 EventDrivenWebAppsImpact|zhu_micro15.pdf|Microarchitectural Implications of Event-driven Server-side Web Applications|2015|MICRO|Explore the impact of event-driven applications on pprocessor microarchitecture
 Characterization|Cray1.pdf|An Analysis of the CRAY-1 computer|1978|ISCA|A good discussion of the CRAY-1 computer, advances, llimitations, and mitigation methods
 Alpha21264Description|ev6chip.pdf|The Alpha 21264 Microprocessor Architecture|1998|ICCD|Microachitecture description about Alpha21264 processors.
+CISCvsRISC|risc.pdf|The Case for the Reduced Instruction Set Computer|1980|Computer Architecture News|Call for RISC. Why not CISC
+CISCvsRISC|hpca13-isa-power-struggles.pdf|Power Struggles: Revisiting the RISC vs. CISC Debate on Contemporary ARM and x86 Architectures|2013|HPCA|Revisit the CISC vs. RISC from the energy-efficiency point of view.
