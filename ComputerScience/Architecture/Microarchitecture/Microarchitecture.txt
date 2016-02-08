@@ -6,3 +6,5 @@ Alpha21264Description|ev6chip.pdf|The Alpha 21264 Microprocessor Architecture|19
 CISCvsRISC|risc.pdf|The Case for the Reduced Instruction Set Computer|1980|Computer Architecture News|Call for RISC. Why not CISC
 CISCvsRISC|hpca13-isa-power-struggles.pdf|Power Struggles: Revisiting the RISC vs. CISC Debate on Contemporary ARM and x86 Architectures|2013|HPCA|Revisit the CISC vs. RISC from the energy-efficiency point of view.
 OOObreakdown|p241-mcfarlin.pdf|Discerning the Dominant Out-of-Order Performance Advantage: Is it Speculation or Dynamism?|2013|ASPLOS|Where is the performance improvements coming from for an OOO processor? This paper gives a goog explanation. 
+MooreLaw|MooresLaw.pdf|Cramming more components onto integrated circuits|1965|Electronics|A first description of Moore's Law
+DarkSilicon|2011-isca-dark_silicon.pdf|Dark Silicon and the End of Multicore Scaling|2011|ISCA|The first study looks at the multicore scaling problem
