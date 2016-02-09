@@ -4,3 +4,4 @@ BrowserDataEncryption|shadowcrypt-ccs14.pdf|ShadowCrypt: Encrypted Web Applicati
 JavaScriptMalwareDetection|usenixsec11b.pdf|ZOOZLE: Fast and Precise In-Browswer JavaScript Malware Detection|2011|USENIX Secrurity|An fast offline JavaScript Malware Detection method. Use the machine learning algorithm to detect the malware.
 CertificateValidationTesting|shmat_oak14.pdf|Using Frankencerts for Automated Adversarial Testing of Certificate Validation in SSL/TLS Implementations|2014|Okland|How to test certificate
 BrowserSecuritySign|emperor.pdf|The Emperor's New Security Indicators|2007|IEEE S&P|Evaluate the efficiency of Web authentication indicators
+BrowserWarningEffectiveness|12308-sec13-paper_akhawe.pdf|Alice in Warningland: A Large-Scale Field Study of Browser Security Warning Effectiveness|2013|USENIX Security|Evaluating the effectiveness of browser warnings
