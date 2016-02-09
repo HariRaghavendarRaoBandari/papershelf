@@ -1,0 +1,1 @@
+MemoryModelSampleCode|MemoryModelCodeSampe.png|Memory model code samples|2016|Parallel Computer Architecture|Four sample codes in the computer architecture area
