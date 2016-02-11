@@ -5,3 +5,4 @@ JavaScriptMalwareDetection|usenixsec11b.pdf|ZOOZLE: Fast and Precise In-Browswer
 CertificateValidationTesting|shmat_oak14.pdf|Using Frankencerts for Automated Adversarial Testing of Certificate Validation in SSL/TLS Implementations|2014|Okland|How to test certificate
 BrowserSecuritySign|emperor.pdf|The Emperor's New Security Indicators|2007|IEEE S&P|Evaluate the efficiency of Web authentication indicators
 BrowserWarningEffectiveness|12308-sec13-paper_akhawe.pdf|Alice in Warningland: A Large-Scale Field Study of Browser Security Warning Effectiveness|2013|USENIX Security|Evaluating the effectiveness of browser warnings
+PGPusability|johnny.pdf|Why Johnny Can't Encrypt: A Usability Evaluation of PGP 5.0|1999|USENIX Security|Evaluate the usability of PGP.

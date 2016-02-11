@@ -3,3 +3,4 @@ AndroidPermission|2011Androidpermissionsdemystified.pdf|Android Permission Demys
 AndroidInformationFlow|Enck.pdf|TaintDroid: An Information-Flow Tracking System for Realtime Privacy Monitoring on Smartphones|2010|OSDI|Four-level information tracking mechanisms combined
 BootStrapingAnalysis|PaMcPe2010.pdf|Bootstrapping Trust in Commodity Computers|2010|Okland|A very important paper on Bootstrapping survey.
 ExploreVulFromPatches|apeg.pdf|Automatic Patch-Based Exploit Generation is Possible: Techniques and Implications|2008|IEEE Security&Privacy|An interesting problem. Exploring vulnerabilites based on patches.
+CryptographicMisuseAnalysis|ccs13_cryptolint.pdf|An Empirical Study of Cryptograhic Misuse|2013|CCS|Use programming language tools to verify whether cryptogrphic APIs are valid or not.
