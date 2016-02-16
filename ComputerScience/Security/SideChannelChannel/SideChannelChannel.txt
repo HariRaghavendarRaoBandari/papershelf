@@ -1,0 +1,1 @@
+ElectronmagneticInterference|ccs2011-emi.pdf|Televisions, Video Privacy, and Powerline Electromagnetic Interference|2011|CCS|Side channel problem on TV signals. 
