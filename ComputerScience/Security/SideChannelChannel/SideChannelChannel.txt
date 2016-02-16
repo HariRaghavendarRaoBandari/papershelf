@@ -1,1 +1,2 @@
 ElectronmagneticInterference|ccs2011-emi.pdf|Televisions, Video Privacy, and Powerline Electromagnetic Interference|2011|CCS|Side channel problem on TV signals. 
+SideChannelWithGyroscopeSignals|sec14-paper-michalevsky.pdf|Gyrophone: Recognizing Speech from Gyroscop Signals|2014|USENIX Security|Speech recognization via Gyroscope signals
