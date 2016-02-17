@@ -8,3 +8,4 @@ CISCvsRISC|hpca13-isa-power-struggles.pdf|Power Struggles: Revisiting the RISC v
 OOObreakdown|p241-mcfarlin.pdf|Discerning the Dominant Out-of-Order Performance Advantage: Is it Speculation or Dynamism?|2013|ASPLOS|Where is the performance improvements coming from for an OOO processor? This paper gives a goog explanation. 
 MooreLaw|MooresLaw.pdf|Cramming more components onto integrated circuits|1965|Electronics|A first description of Moore's Law
 DarkSilicon|2011-isca-dark_silicon.pdf|Dark Silicon and the End of Multicore Scaling|2011|ISCA|The first study looks at the multicore scaling problem
+MemoryConsistencyModel|95-consistency.pdf|Shared Memory Consistency Models: A Tutorial|1995|TechReport|A survey on the memory consistency problem.  Interesting to read. 
