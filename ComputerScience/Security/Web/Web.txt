@@ -6,3 +6,5 @@ CertificateValidationTesting|shmat_oak14.pdf|Using Frankencerts for Automated Ad
 BrowserSecuritySign|emperor.pdf|The Emperor's New Security Indicators|2007|IEEE S&P|Evaluate the efficiency of Web authentication indicators
 BrowserWarningEffectiveness|12308-sec13-paper_akhawe.pdf|Alice in Warningland: A Large-Scale Field Study of Browser Security Warning Effectiveness|2013|USENIX Security|Evaluating the effectiveness of browser warnings
 PGPusability|johnny.pdf|Why Johnny Can't Encrypt: A Usability Evaluation of PGP 5.0|1999|USENIX Security|Evaluate the usability of PGP.
+WebPrivacy|2013_SP_cookieless.pdf|Cookieless Monster: Exploring the Ecosystem of Web-based Device Fingerprinting|2013|IEEE S&P|Fingerprinting problem
+WebPrivacy|trackingsurvey12.pdf|Third-Party Web Tracking: Policy and Technology|2012|IEEE S&P|3rd web tracking survey
