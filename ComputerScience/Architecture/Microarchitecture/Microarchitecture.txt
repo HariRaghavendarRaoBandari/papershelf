@@ -9,3 +9,5 @@ OOObreakdown|p241-mcfarlin.pdf|Discerning the Dominant Out-of-Order Performance 
 MooreLaw|MooresLaw.pdf|Cramming more components onto integrated circuits|1965|Electronics|A first description of Moore's Law
 DarkSilicon|2011-isca-dark_silicon.pdf|Dark Silicon and the End of Multicore Scaling|2011|ISCA|The first study looks at the multicore scaling problem
 MemoryConsistencyModel|95-consistency.pdf|Shared Memory Consistency Models: A Tutorial|1995|TechReport|A survey on the memory consistency problem.  Interesting to read. 
+VLIW|Fisher-VLIW-Retrospective.pdf|Very Long Instruction Word Architectures and the ELI-512|unkown|TechReport|VLIW retrospective
+VLIWdetail|Fisher-VLIW.pdf|Very Long Instruction Word and Architectures And the ELI-512|1983|ACM Journal|A detailed description about VLIW's compiler and architecture
