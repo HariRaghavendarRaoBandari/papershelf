@@ -11,3 +11,5 @@ DarkSilicon|2011-isca-dark_silicon.pdf|Dark Silicon and the End of Multicore Sca
 MemoryConsistencyModel|95-consistency.pdf|Shared Memory Consistency Models: A Tutorial|1995|TechReport|A survey on the memory consistency problem.  Interesting to read. 
 VLIW|Fisher-VLIW-Retrospective.pdf|Very Long Instruction Word Architectures and the ELI-512|unkown|TechReport|VLIW retrospective
 VLIWdetail|Fisher-VLIW.pdf|Very Long Instruction Word and Architectures And the ELI-512|1983|ACM Journal|A detailed description about VLIW's compiler and architecture
+GCNarchitecture|GCN_Architecture_whitepaper.pdf|AMD Graphics Cores Next (GCN) Architecture|2012|White paper|AMD GCN core architecture
+ManyCoreArchitecture|larrabee_manycore.pdf|Larrabee: A Many-Core x86 Architecture for Visual Computing|2012|ACM Trans on Grpahics|A many-core architecture for visual computing. An interesting desgin but the motivation is a little bit weak.
