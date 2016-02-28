@@ -1,3 +1,4 @@
 ArchSupportForUnstructured|p533-fang.pdf|Fast Support for Unstructured Data Processing: the Unified Automata Processor|2015|MICRO|A new architecture for unified automata data processing
 BitcoinMiningHWSurvey|bitcoin_taylor_cases_2013.pdf|Bitcoin and The Age of Bespoke Silicon|2013|CASES|HW evolution of Bitcoin. It's time for specialization.
 MobileApplicationProcessor|IEEEComm2011GreenDroid.pdf|GreenDroid: Exploring the Next Evolution in Smartphone Application Processor |2011|IEEE Integrated Circuits for Communications|A processor for mobile applications. An interesting design.
+MDacceleration|shaw07_anton.pdf|Anton, a Special-Purpose Machine for Molecular Dynamics Simulation|2007|ISCA|A good specialized processor design for molecular dynamics. 
