@@ -8,3 +8,4 @@ BrowserWarningEffectiveness|12308-sec13-paper_akhawe.pdf|Alice in Warningland: A
 PGPusability|johnny.pdf|Why Johnny Can't Encrypt: A Usability Evaluation of PGP 5.0|1999|USENIX Security|Evaluate the usability of PGP.
 WebPrivacy|2013_SP_cookieless.pdf|Cookieless Monster: Exploring the Ecosystem of Web-based Device Fingerprinting|2013|IEEE S&P|Fingerprinting problem
 WebPrivacy|trackingsurvey12.pdf|Third-Party Web Tracking: Policy and Technology|2012|IEEE S&P|3rd web tracking survey
+WebPrivacy|otr-wpes.pdf|Off-the-Record Communication, or, Why Not To Use PGP|2004|WPES|Protocol, Design, and Implementation on perfect forward secrecy
