@@ -1,0 +1,1 @@
+WirelessSensing|asplos215-liaqat.pdf|Sidewinder: An Energy Efficiency and Developer Fridendly Heterogeneous Architecture for Continusous Mobile sensing|2016|ASPLOS|Energy efficiency wireless sensing by decouping monitoring events and wake-up conditions
