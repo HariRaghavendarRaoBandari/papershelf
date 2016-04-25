@@ -1,0 +1,1 @@
+AutomaticFPGA|asplos16-prabhakar.pdf|Generating Configurable Hardware from Parallel Patterns|2016|ASPLOS|Using low-level parallel patterns to explore the FPGA design
