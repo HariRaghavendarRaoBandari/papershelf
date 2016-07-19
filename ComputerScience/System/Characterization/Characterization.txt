@@ -1,2 +1,3 @@
 NFSv4Analysis|p165-chen.pdf|Newer is Sometimes Better: An Evaluation of NFSv4.1|2015|Sigmetrics|A detailed evaluation about NSF v4. More SOS , network, and system findings. Discuss in details about delegations.
 VirtualTrafficAnalysis|p403-birke.pdf|When Virtual Meets Physical at the Edge: A Field Study on Datacenters' Virtual Traffic|2015|Sigmetrics|Some virtual traffice analysis from IBM. Might be used for references. Not so many system level indications.
+MemcachedAnalysis|atikoglu12-memcached.pdf|Workload Analysis of a Large-Scale Key-Value Store|2012|Sigmetrics|Detailed analysis of Memcached workload characteristics

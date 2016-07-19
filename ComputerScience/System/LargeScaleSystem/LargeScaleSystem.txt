@@ -2,3 +2,4 @@ LineralizableRPC|p71-lee.pdf|Implementing Lineraizability at Large Scale and Low
 DynamicCausalMonitoring|p378-mace.pdf|Pivot Tracing: Dynamic Causal monitoring for Distributed Systems|2015|SOSP|Dynamic Causual Monitoring for the large distributed system. A happen-before relation is used. May be better to discuss with OOP aspect programming model.
 OptimizingBitcoinProtocol|1510.02037v2.pdf|Bitcoin-NG: A Scalable Blockchain Protocol|2016|NSDI|Optimizing the performance of consensus protocols for bitcoin infrastructure.
 Loadbalancing|nsdi16-paper-li-xiaozhou.pdf|Be Fast, Cheap and in Control with SwitchKVM|2016|NSDI|Use programmable switch to do content based hashing based on keys
+MemcachedScaling|nsdi13-final170_update.pdf|Scaling Memcache at Facebook|2013|NSDI|A description of large-scale Memcached cluster
