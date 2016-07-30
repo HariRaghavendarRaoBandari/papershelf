@@ -1,0 +1,1 @@
+ReducingIOoverhead|osdi14-paper-peter_simon.pdf|Arrkis: The Operating System is the Control Plane|2014|OSDI|Separate the control and data plane for network operating system based on emerging IO devices
