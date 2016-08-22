@@ -1,1 +1,2 @@
 FrameworkDesign|p121-palkar.pdf|E2: A Framework for NFV Applications|2015|SOSP|A good background description on NFV. They propose a scalable and application-agnostic scheduling framework.
+Programmability|sigcomm16_clicknp.pdf|ClickNP: Highly Flexible and High Performance Network Processing with Reconfigurable Hardware|2016|SIGCOMM|An FPGA based click router implementation
