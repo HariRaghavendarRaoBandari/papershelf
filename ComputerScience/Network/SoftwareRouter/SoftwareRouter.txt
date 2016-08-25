@@ -1,1 +1,2 @@
 SoftwareRouterOnGeneralCPUs|p112-fall.pdf|RouteBricks: Enabling General Purpose Network Infrastructure|2009|SOSP|A system design of implementing router functionality on general CPUs by exploring parallelism
+GPUacceleration|packetshader.pdf|PacketShader: a GPU-Accelerated Software Router|2010|SIGCOMM|A great paper. Careful system design considerations.

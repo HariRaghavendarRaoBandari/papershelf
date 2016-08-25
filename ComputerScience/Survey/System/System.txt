@@ -1,0 +1,1 @@
+DatacenterOSAndNFV|p38-bailis.pdf|Introducing Research for Practice for Datacenter OS and NVF|2016|Communications of ACM|A greate introduction to datacenter os and nfv
