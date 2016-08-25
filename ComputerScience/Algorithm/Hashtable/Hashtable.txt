@@ -1,0 +1,2 @@
+LockFree|2001-caslists.pdf|A Pragmatic Implementation of Non-Blocking Linked-Lists|2001|DISC|Use architectural low-level primitives to implement a lock-free linked list
+LockFree|spaa-2002.pdf|High Performance Dynamic Lock-Free Hash Tables and List-Based Sets|2002|SPAA|A lock-free hashtable implementation based based on a lock-free linked list. Consisting memory management.
