@@ -1,0 +1,1 @@
+OneSide|atc13-mitchell.pdf|Using One-Sided RDMA Reads to Build a Fast, CPU-Efficient Key-Value Store|2013|ATC|A key-value store design with one-side RDMA. Solve the WR race problem with a self-verified data structure.
