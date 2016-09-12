@@ -1,1 +1,2 @@
 OneSide|atc13-mitchell.pdf|Using One-Sided RDMA Reads to Build a Fast, CPU-Efficient Key-Value Store|2013|ATC|A key-value store design with one-side RDMA. Solve the WR race problem with a self-verified data structure.
+OneSide|nsdi14-paper-dragojevic.pdf|FaRM: Fast Remote Memory|2014|NSDI|A distributed shared memory computing framework based on RDMA. Mainly solvie the race problem and location-aware memory management, transation execution, etc. issues
