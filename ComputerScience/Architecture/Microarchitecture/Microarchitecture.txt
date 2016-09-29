@@ -15,3 +15,4 @@ GCNarchitecture|GCN_Architecture_whitepaper.pdf|AMD Graphics Cores Next (GCN) Ar
 ManyCoreArchitecture|larrabee_manycore.pdf|Larrabee: A Many-Core x86 Architecture for Visual Computing|2012|ACM Trans on Grpahics|A many-core architecture for visual computing. An interesting desgin but the motivation is a little bit weak.
 AcceleratorDesign|asplos16-exocore.pdf|Analyzing Behavior Specialized Acceleration|2016|ASPLOS|Behavior specialized acceleration desgin 
 Emulator|openpiton-asplos16.pdf|OpenPiton: An Open Source Manycore Research Framework|2016|ASPLOS|Discuss a new reserach platform
+Characterization|SPECanalysis.pdf|Memory Characterization of Workloads Using Instrumentation-Driven Simulation|2006|Non|A detailed memory characterization of CPU SPEC2006 based on Pin
