@@ -1,0 +1,1 @@
+SensorComputing|likamwa2016redeye-isca.pdf|Analog ConvNet Image Sensor Architecture for Continuous Mobile Vision|2016|ISCA| Moving a convonlutional neural network in the analog domain
