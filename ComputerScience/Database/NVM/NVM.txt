@@ -1,0 +1,1 @@
+NVMdesign|IC_20150501_May_2015.pdf|Emerging Hardware Trends in Large-Scale Transaction Processing|2015|IEEE Internet Computing|A vision paper. What's the impact of new hardware on DBMS?
