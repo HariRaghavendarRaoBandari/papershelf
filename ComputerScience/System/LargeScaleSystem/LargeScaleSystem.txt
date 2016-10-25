@@ -4,3 +4,7 @@ OptimizingBitcoinProtocol|1510.02037v2.pdf|Bitcoin-NG: A Scalable Blockchain Pro
 Loadbalancing|nsdi16-paper-li-xiaozhou.pdf|Be Fast, Cheap and in Control with SwitchKVM|2016|NSDI|Use programmable switch to do content based hashing based on keys
 MemcachedScaling|nsdi13-final170_update.pdf|Scaling Memcache at Facebook|2013|NSDI|A description of large-scale Memcached cluster
 DRAMforall|ramcloud.pdf|The Case for RAMClouds: Scalable High-Performance Storage Entirely in DRAM|2009|OS review|A vision paper on RAMClouds
+DRAMforall|a7-ousterhout.pdf|The RAMCloud Storage System|2015|TOCS|A detailed summary about various design aspects of RAMCloud
+DRAMforall|fast14-paper_rumble.pdf|Log-structured Memory for DRAM-based Storage|2014|FAST|Log-structured memory design for RAMCloud
+DRAMforall|ramcloud-recovery.pdf|Fast Crash Recovery in RAMCloud|2011|SOSP|Take advantage of scalability to improve the recovery performance
+DataStorage|bigtable-osdi06.pdf|Bigtable: A Distributed Storage System for Structured Data|2006|OSDI|Google's 1st distributed system, focusing on large scalability for the data store.
