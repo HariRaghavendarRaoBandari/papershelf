@@ -8,3 +8,4 @@ DRAMforall|a7-ousterhout.pdf|The RAMCloud Storage System|2015|TOCS|A detailed su
 DRAMforall|fast14-paper_rumble.pdf|Log-structured Memory for DRAM-based Storage|2014|FAST|Log-structured memory design for RAMCloud
 DRAMforall|ramcloud-recovery.pdf|Fast Crash Recovery in RAMCloud|2011|SOSP|Take advantage of scalability to improve the recovery performance
 DataStorage|bigtable-osdi06.pdf|Bigtable: A Distributed Storage System for Structured Data|2006|OSDI|Google's 1st distributed system, focusing on large scalability for the data store.
+DistributedDatabase|spanner-osdi2012.pdf|Spanner: Google's Globall-Distributed Database|2012|OSDI|The design and implementation of large-scale distributed database system
