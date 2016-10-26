@@ -1,0 +1,1 @@
+EfficientReplication|replicas.ps.pdf|The Dangers of Replication and a Solution|1996|SIGMOD|two-tier replication algorithm
