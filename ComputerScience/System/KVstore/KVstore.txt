@@ -1,0 +1,2 @@
+SoftwareOptimization|nsdi14-paper-lim.pdf|MICA: A Holistic Approach to Fast In-Memory Key-Value Storage|2014|NSDI|Three software techniques: (1) data patition; (2) I/O kernel bypassing; (3) New data structure
+WholeSystemOptimization|p476-li.pdf|Architecting to Achieve a Billion Requests Per Second Throughput on a Single Key-Value Store Server Platform|2015|ISCA|Explore the HW/SW design considerations for a high performance key-value store
