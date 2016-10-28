@@ -115,3 +115,10 @@
 # d. database compression;
 # e. multi-thread support;
 # f. ......
+#
+# IV. User experience:
+# Based on my one-year user experience, there're more many things should be rewritten:
+# a. -p option is really not good;
+# b. Dynamic list field/subfield;
+# c. Support a SQL-like language;
+# d. Database idea is bad or good?
