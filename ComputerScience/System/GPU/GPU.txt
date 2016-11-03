@@ -1,0 +1,1 @@
+GPUnetworking|osdi14-paper-kim.pdf|GPUnet:Networking Abstractions for GPU Programs|2014|OSDI|Moving the OS network stack to GPU.
