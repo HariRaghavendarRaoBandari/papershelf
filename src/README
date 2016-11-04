@@ -122,3 +122,5 @@
 # b. Dynamic list field/subfield;
 # c. Support a SQL-like language;
 # d. Database idea is bad or good?
+# f. Exisiting design using -f -s -p -n is not so good. Considering using an elegant 
+# implementation with tags;
