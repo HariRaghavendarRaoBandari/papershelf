@@ -1,0 +1,1 @@
+SoftwareDefinedFlash|ouyang14-SDF.pdf|SDF: Software-Defined Flash for Web-Scale Internet Storage Systems|2014|ASPLOS|Customized storage system design at Baidu
