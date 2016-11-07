@@ -1,1 +1,2 @@
 InMemDatabase|hstore-demo.pdf|H-Store: A High-Performance, Distributed Main Memory Transaction Processing System |2008|VLDB|H-Store design and implementation
+InMemDatabase|hstore.pdf|The End of an Architectural Era (It's Time for a Complete Rewrite)|2007|VLDB|The motivation, design, and implementation of Hstore
