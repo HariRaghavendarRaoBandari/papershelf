@@ -11,3 +11,4 @@ DataStorage|bigtable-osdi06.pdf|Bigtable: A Distributed Storage System for Struc
 DistributedDatabase|spanner-osdi2012.pdf|Spanner: Google's Globall-Distributed Database|2012|OSDI|The design and implementation of large-scale distributed database system
 DistributedDatabase|41344.pdf|F1: A Distributed SQL Database That Scales|2013|VLDB|Google's distributed SQL Database based on top of Spanner
 DistributedDatabase|CIDR11_Paper32.pdf|Megastore: Providing Scalable, High Available Storage for interactive Services|2011|CIDR|Google's Megastore: Combing NoSQL Bigtable with traditional relational database
+RealTimeProcessing|p147-toshniwal.pdf|Storm @Twitter|2014|SIGMOD|How to Twitter uses the store and what're the implications
