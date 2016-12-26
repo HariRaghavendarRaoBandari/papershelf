@@ -1,1 +1,2 @@
 SDNhistory|sdnhistory.pdf|The Road to SDN: An Intellectual History of Programmable Networks|2013|ACM Queue|How SDN evlove in the last 20 years
+OpenFlow|openflow-wp-latest.pdf|OpenFlow: Enabling Innovation in Campus Networks|2008|SIGCOMM CCR|1st work introducing the OpenFlow idea
