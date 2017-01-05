@@ -1,0 +1,1 @@
+OneSide|herd_readable.pdf|Using RDMA Efficiently for Key-Value Services|2014|SIGCOMM|Combine unreliable connected WRITE with unreliable datagram SEND
