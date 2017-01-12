@@ -1,0 +1,1 @@
+SingleISAHeterogeneousCMP|heterogeneous_multicore_isca04.pdf|Single-ISA Heterogeneous Multi-Core Architectures for Multithreaded Workload Performance|2004|ISCA|Single-ISA heterogeneous CMPs outperforms homogeneous CMPs
