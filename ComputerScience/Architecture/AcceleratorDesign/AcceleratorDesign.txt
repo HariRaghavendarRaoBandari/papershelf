@@ -1,2 +1,3 @@
 AutomaticFPGA|asplos16-prabhakar.pdf|Generating Configurable Hardware from Parallel Patterns|2016|ASPLOS|Using low-level parallel patterns to explore the FPGA design
 AutomaticFPGA|2016.isca.dhdl.pdf|Automatic Generation of Efficient Accelerators for Reconfigurable Hardware|2016|ISCA|A framework exploring FPGA designs
+GraphProcessing|taejun_micro16.pdf|Graphicionado: A High-Performance and Energy-Efficient Accelerator for G G Graph Analytics|2016|MICRO|Accelerator for graph processing
