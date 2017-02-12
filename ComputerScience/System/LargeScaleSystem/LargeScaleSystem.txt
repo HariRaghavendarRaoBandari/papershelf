@@ -13,3 +13,4 @@ DistributedDatabase|41344.pdf|F1: A Distributed SQL Database That Scales|2013|VL
 DistributedDatabase|CIDR11_Paper32.pdf|Megastore: Providing Scalable, High Available Storage for interactive Services|2011|CIDR|Google's Megastore: Combing NoSQL Bigtable with traditional relational database
 RealTimeProcessing|p147-toshniwal.pdf|Storm @Twitter|2014|SIGMOD|How to Twitter uses the store and what're the implications
 WimpyCluster|vasudevan.pdf|FAWNdamentally Power-efficient Clusters|2009|HotOS|A proposal for FAWN cluster
+Colocation|osdi16-zhang-yunqi.pdf|History-Based Harvesting of Spare Cycles and Storage in Large-Scale Datacenters|2016|OSDI|Harvesting computing cycles and storage capacity from latency-critical workloads to batched workloads
